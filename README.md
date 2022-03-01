@@ -4,6 +4,8 @@ The files in this repository were used to configure the network depicted below.
 
 ![ELK Stack deployment diagram.](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/ELK-StackDeployment.png)
 
+Fig. 1: ELK stack deployment in the Azure cloud. 
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml files to install only certain pieces of it, such as Filebeat.
 
   - The ELK stack can be installed to a dedicated ELK server by simply running the install-elk.yml file.
