@@ -21,14 +21,13 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application.
-
-Load balancing ensures that the application will be highly efficient as it will distribute network traffic across multiple servers, in addition to restricting in-bound access to the network.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Damn Vulnerable Web Application. Load balancing ensures that the application will be highly efficient as it will distribute network traffic across multiple servers, in addition to restricting in-bound access to the network.
 - The load balancer will be able to provide protection against DDoS attack by shifting attack traffic to public cloud server from the corporate server. 
 
-A jump server or jump host i.e., a special-purpose computer is used to configure DVWA web server and ELK server on the network. The JumpBoxProvisioner as shown in Fig. 1 is used to access and configure devices in two virtual networks. In this project the JumpBoxProvisioner, i.e. a Linux machine is used to configure and provision ELK server, DVWA servers via Ansible docker.
+- A jump server or jump host i.e., a special-purpose computer is used to configure DVWA web server and ELK server on the network. The JumpBoxProvisioner as shown in Fig. 1 is used to access and configure devices in two virtual networks. In this project the JumpBoxProvisioner, i.e. a Linux machine is used to configure and provision ELK server, DVWA servers via Ansible docker.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
+
 - _Filebeat_: Filebeat consists of two main components: inputs and harvesters. A harvester is responsible for reading the content of a single file. The harvester reads each file, line by line, and sends the content to the output. One harvester is started for each file. An input on the other hand, is responsible for managing the harvesters and finding all sources to read from. In summary, Filebeat monitors the specified log files or locations, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 - _Metricbeat_: Metricbeat consists of modules and metricsets. A Metricbeat module defines the basic logic for collecting data from a specific service, such as Redis, MySQL etc. The module specifies details about the service, including how to connect, how often to collect metrics, and which metrics to collect. Metricbeat retrieves metrics by periodically interrogating the host system based on the period value that is specified during the module configuration.
 
