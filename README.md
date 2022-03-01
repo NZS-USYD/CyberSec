@@ -26,7 +26,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly efficient as it will distribute network traffic across multiple servers, in addition to restricting in-bound access to the network.
 - The load balancer will be able to provide protection against DDoS attack by shifting attack traffic to public cloud server from the corporate server. 
 
-A jump server or jump host or jumpbox is a special-purpose computer on a network. It is typically used to access devices in a separate security zone. The most common example is managing a host in a DMZ from trusted networks or computers. In this project the jump box, i.e. a Linux machine is used to configure and provision ELK server, DVWA servers via Ansible docker.
+A jump server or jump host i.e., a special-purpose computer is used to configure DVWA web server and ELK server on the network. Mainly the Jumpbox typically used to access devices in a separate security zone. The most common example is managing a host in a DMZ from trusted networks or computers. In this project the jump box, i.e. a Linux machine is used to configure and provision ELK server, DVWA servers via Ansible docker.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
