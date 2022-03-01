@@ -40,7 +40,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1              | DVWA Container, Web server                         | 10.2.0.6/24 (Private)                        | Ubuntu 18.04 (Linux) |
 | Web-2              | DVWA Container, Web server                         | 10.2.0.7/24 (Private)                        | Ubuntu 18.04 (Linux) |
 | Web-3              | DVWA Container, Web Server                         | 10.2.0.8/24 (Private)                        | Ubuntu 18.04 (Linux) |
-| ELK Server         | ELK Server for log monitoring                      | 20.98.218.27 (Public) 10.3.0.4/24 (Private)  | Ubuntu 18.04 (Linux) |
+| ELK Server         | ELK Server for log collection  and monitoring      | 20.98.218.27 (Public) 10.3.0.4/24 (Private)  | Ubuntu 18.04 (Linux) |
 
 ### Access Policies
 
@@ -54,11 +54,13 @@ Machines within the network can only be accessed by Administrator/Personal Machi
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name               | Publicly accessible | Allowed IP Address                                                                   |
+|--------------------|---------------------|--------------------------------------------------------------------------------------|
+| JumpBoxProvisioner | Yes                 | 115.129.151.129                                                                      |
+| Web-1              | No                  | 115.129.151.129 (via load balancer),  10.2.0.4/24 (Private IP of JumpBoxProvisioner) |
+| Web-2              | No                  | 115.129.151.129 (via load balancer), 10.2.0.4/24 (Private IP of JumpBoxProvisioner)  |
+| Web-3              | No                  | 115.129.151.129 (via load balancer),  10.2.0.4/24 (Private IP of JumpBoxProvisioner) |
+| ELK Server         | Yes                 | 115.129.151.129                                                                      |
 
 ### Elk Configuration
 
