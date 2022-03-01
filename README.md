@@ -65,7 +65,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because of the following reasons:
-- _Ansible enables an administrator to control machines them via SSH._
+- _Ansible allows an administrator to control remote machines via SSH._
 - _Ansible can save time comparing with manual configuration._
 - _Automation via Ansible can reduce bugs and errors._
 
