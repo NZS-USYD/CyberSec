@@ -31,15 +31,16 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _Filebeat_: Filebeat consists of two main components: inputs and harvesters. A harvester is responsible for reading the content of a single file. The harvester reads each file, line by line, and sends the content to the output. One harvester is started for each file. An input on the other hand, is responsible for managing the harvesters and finding all sources to read from. In summary, Filebeat monitors the specified log files or locations, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 - _Metricbeat_: Metricbeat consists of modules and metricsets. A Metricbeat module defines the basic logic for collecting data from a specific service, such as Redis, MySQL etc. The module specifies details about the service, including how to connect, how often to collect metrics, and which metrics to collect. Metricbeat retrieves metrics by periodically interrogating the host system based on the period value that is specified during the module configuration.
 
-The configuration details of each machine may be found below.
+The configuration details of each machine can be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name               | Function                                           | IP Address                                   | Operating System     |
+|--------------------|----------------------------------------------------|----------------------------------------------|----------------------|
+| JumpBoxProvisioner | Provisioning, Access Management, Server Deployment | 20.124.203.24 (Public) 10.2.0.4/24 (Private) | Ubuntu 18.04 (Linux) |
+| Web-1              | DVWA Container, Web server                         | 10.2.0.6/24 (Private)                        | Ubuntu 18.04 (Linux) |
+| Web-2              | DVWA Container, Web server                         | 10.2.0.7/24 (Private)                        | Ubuntu 18.04 (Linux) |
+| Web-3              | DVWA Container, Web Server                         | 10.2.0.8/24 (Private)                        | Ubuntu 18.04 (Linux) |
+| ELK Server         | ELK Server for log monitoring                      | 20.98.218.27 (Public) 10.3.0.4/24 (Private)  | Ubuntu 18.04 (Linux) |
 
 ### Access Policies
 
