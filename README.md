@@ -80,6 +80,10 @@ Fig. 2: Configuring the `hosts` file to run playbook on the dedicated ELK VM.
 - _While being in the Ansible container, `touch /etc/ansible/install-elk.yml` command was used to create YAML script._
 
 
+![elk-install.yml configration](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/YAML%20script%20for%20ELK%20stack%20configuration.png)
+
+Fig. 3: YAML script for ELK stack configuration.  
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
