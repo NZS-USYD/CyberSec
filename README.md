@@ -70,9 +70,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _Automation via Ansible can reduce bugs and errors._
 
 The ELK stack implementation was carried out by Ansible. After creating a dedicated VM in Azure for ELK stack installation, it is accessed via SSH from the Ansible container (installed at JumpBoxProvisioner). In the next step, an Ansible playbook named `install-elk.yml` is created to finish the ELK stack implementation. The playbook performs the following tasks:
-- _Step 1: In the first step, the `hosts` file in the `/etc/ansible/` directory was configured so that Ansible can discover ELK VM (RedTeamELK Server) 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- _Step 1: In the first step as shown in Fig. 2, the `hosts` file in the `/etc/ansible/` directory was configured so that Ansible can discover ELK VM (RedTeamELK Server). 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
 - ...
+![hosts file configuration](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/hosts%20file%20configuration%20for%20Ansible%20to%20run%20playbook%20to%20dedicated%20ELK%20server.png)
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
