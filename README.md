@@ -77,12 +77,16 @@ Fig. 2: Configuring the `hosts` file to run playbook on the dedicated ELK VM.
 
 - _Step 1: In the first step as shown in Fig. 2, the `hosts` file in the `/etc/ansible/` directory was configured so that Ansible can discover ELK VM (RedTeamELK Server)._
 - _A group called `[elk]` was added and the IP address of the ELK VM (10.3.0.4) was added._
-- _While being in the Ansible container, `touch /etc/ansible/install-elk.yml` command was used to create YAML script. In the next step, a YAML script was written as shown in Fig. 3 in the `install-elk.yml` file._
-- _ Finally, the install-elk.yml file was run to finish the ELK stack installation on the dedicated RedTeamELK Server._ 
+- _While being in the Ansible container, `touch /etc/ansible/install-elk.yml` command was used to create YAML script. In the next step, a YAML script was written as shown in Fig. 3 by editing into the `install-elk.yml` playbook._
+- _Finally, the playbook was run by using `ansible-playbook install-elk.yml` command to finish the ELK stack installation on the dedicated RedTeamELK Server, as shown in Fig. 4._ 
 
 ![elk-install.yml configration](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/YAML%20script%20for%20ELK%20stack%20configuration.png)
 
-Fig. 3: YAML script for ELK stack configuration.  
+Fig. 3: YAML script for ELK stack configuration. 
+
+![ELK stack installation via playbook](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Installing%20ELK%20Stack.png)
+
+FIg. 4: ELK stack installation via Ansible playbook.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
