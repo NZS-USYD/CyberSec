@@ -88,9 +88,11 @@ Fig. 3: YAML script for ELK stack configuration.
 
 FIg. 4: ELK stack installation via Ansible playbook.
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+Now `SSH` into the ELK server and issue `docker ps` from the ELK server's terminal to verify that the ELK instance is successfully running . 
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![Validation: docker ps output to verify that ELK docker is running.](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Validation%20that%20elk%20docker%20is%20running.png)
+
+Fig. 5: Validation: `docker ps` output to verify that ELK docker is running.
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
