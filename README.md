@@ -69,7 +69,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _Ansible can save time comparing with manual configuration._
 - _Automation via Ansible can reduce bugs and errors._
 
-The playbook implements the following tasks:
+The ELK stack implementation was carried out by Ansible. After creating a dedicated VM in Azure for ELK stack installation, it is accessed via SSH from the Ansible container (installed at JumpBoxProvisioner). In the next step, an Ansible playbook named `install-elk.yml` is created to finish the ELK stack implementation. The playbook performs the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
 - ...
