@@ -1,1 +1,43 @@
-
+---
+- name: Config DVWAELK VM with Docker
+  hosts: elk
+  remote_user: elkuser
+  become: true
+  tasks:
+  - name: Install docker.io
+    apt:
+        update_cache: yes
+        force_apt_get: yes
+        name: docker.io
+        state: present
+  - name: Install pip3
+    apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
+  - name: Install Docker Python Module
+    pip:
+        name: docker
+        state: present
+  - name: Increase Virtual Memory
+    command: sysctl -w vm.max_map_count=262144
+  - name: Use More Memory
+    sysctl:
+        name: vm.max_map_count
+        value: "262144"
+        state: present
+        reload: yes
+  - name: Download and launch a Docker ELK Container
+    docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+        published_ports:
+          - 5601:5601
+          - 9200:9200
+          - 5044:5044
+  - name: Enable Service Docker On Boot
+    systemd:
+        name: docker.service
+        enabled: yes
