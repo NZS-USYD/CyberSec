@@ -142,7 +142,7 @@ Fig. 9: Metricbeat monitoring Web-2
 Fig. 10: Metricbeat monitoring Web-3 
 
 ### Using the Playbook.
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+To use the playbook, an Ansible control node is configured in the JumpBoxProvisioner VM. 
 
 SSH into the control node and follow the steps below:
 - Copy the _____ file to _____.
@@ -152,4 +152,4 @@ SSH into the control node and follow the steps below:
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?In order to access the Kibana dashboard via ELK server use the following url:_ `http://52.251.126.104:5601/`
+- _Which URL do you navigate to in order to check that the ELK server is running?In order to access the Kibana dashboard via ELK server use the following url:_ `http://ELK-VM's.public.IP:5601/` i.e. `http://20.98.218.27:5601/`
