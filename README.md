@@ -125,6 +125,12 @@ Filebeat also collects `SSH` authentication logs, syslogs, web server data etc. 
 
 Fig. 7: Filebeat collecting `SSH` authentication logs.
 
+Here is another example of Filebeat collecting system log.
+
+![syslog collection](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(FileBeat)%20collecting%20syslog.PNG)
+
+FIg. 8: Filebeat collecting syslog  
+
 - _Metricbeat_: Metricbeat monitors servers by collecting metrics from the system and services running on the server as shown in Fig. 7 and Fig. 8.
 
 ![Metricbeat collecting docker status](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(MetricBeat)%20collectiong%20docker%20information.PNG)
