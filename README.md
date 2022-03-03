@@ -152,11 +152,11 @@ SSH into the JumpBoxProvisioner and follow the steps below:
 - Now go to Ansible directory and configure the host file  as given in Fig .11.
 ![Ansible hosts file configuration](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/hosts%20file%20configuration%20for%20Ansible%20to%20run%20playbook%20to%20dedicated%20ELK%20server.png)
 
-Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server. This Will allow Ansible playbook to run ELK server and Filebeat & Metricbeat in the appropriate VM.
+Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server. This will allow Ansible playbook to run ELK server and Filebeat & Metricbeat in the appropriate VM.
 
-- Run Ansible playbook by using `ansible-playbook install-elk.yml`, `ansible-playbook filebeat-playbook.yml` and `ansible-playbook metricbeat-playbook.yml` commands to install ELK stack, Filebeat and Metricbeat respectively.
+- _Note that `install-elk.yml`, `filebeat-playbook.yml` and `metricbeat-playbook.yml`_ are the Ansible playbooks, should be placed in the Ansible directory `/etc/ansible`.
+- Run these playbooks by using `ansible-playbook install-elk.yml`, `ansible-playbook filebeat-playbook.yml` and `ansible-playbook metricbeat-playbook.yml` commands to install ELK stack, Filebeat and Metricbeat respectively. 
 
-_TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?In order to access the Kibana dashboard via ELK server use the following url:_ `http://ELK-VM's.public.IP:5601/` i.e. `http://20.98.218.27:5601/`
