@@ -154,7 +154,7 @@ SSH into the JumpBoxProvisioner and follow the steps below:
 
 Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server. This will allow Ansible playbook to run ELK server and Filebeat & Metricbeat in the appropriate VM.
 
-- _Note that `install-elk.yml`, `filebeat-playbook.yml` and `metricbeat-playbook.yml`_ are the Ansible playbooks, should be placed in the Ansible directory `/etc/ansible`.
+- Note that `install-elk.yml`, `filebeat-playbook.yml` and `metricbeat-playbook.yml` are the Ansible playbooks, should be placed in the Ansible directory `/etc/ansible`.
 - Run these playbooks by using `ansible-playbook install-elk.yml`, `ansible-playbook filebeat-playbook.yml` and `ansible-playbook metricbeat-playbook.yml` commands to install ELK stack, Filebeat and Metricbeat respectively. 
 
 In order to access the Kibana dashboard via ELK server use the following url:_ `http://ELK-VM's.public.IP:5601/` i.e. `http://20.98.218.27:5601/`
