@@ -144,8 +144,15 @@ Fig. 10: Metricbeat monitoring Web-3
 ### Using the Playbook.
 To use the playbook, an Ansible control node is configured in the JumpBoxProvisioner VM. 
 
-SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
+SSH into the JumpBoxProvisioner and follow the steps below:
+- `sudo su` to gain root privilege
+- `docker container  list -a` to identify the Ansible controle node/docker
+- `docker start exciting_moltancini` where exciting_montalcini is the Ansible docker 
+- `docker attach exciting_montalcini` to access the Ansible docker for ELK server provisiong
+- Now go to Ansible directory and configure the host file  as given in Fig .11.
+![Ansible hosts file configuration](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/hosts%20file%20configuration%20for%20Ansible%20to%20run%20playbook%20to%20dedicated%20ELK%20server.png)
+
+Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server   
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
