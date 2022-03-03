@@ -90,7 +90,7 @@ FIg. 4: ELK stack installation via Ansible playbook.
 
 Now `SSH` into the ELK server and issue `docker ps` from the ELK server's terminal to verify that the ELK instance is successfully running . 
 
-![Validation: docker ps output to verify that ELK docker is running.](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Validation%20that%20elk%20docker%20is%20running.png)
+![Validation: docker ps output to verify that ELK docker is running.](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/elk%20docker%20installation%20is%20successful.png)
 
 Fig. 5: Validation: `docker ps` output to verify that ELK docker is running.
 
