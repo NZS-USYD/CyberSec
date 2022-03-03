@@ -152,7 +152,8 @@ SSH into the JumpBoxProvisioner and follow the steps below:
 - Now go to Ansible directory and configure the host file  as given in Fig .11.
 ![Ansible hosts file configuration](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/hosts%20file%20configuration%20for%20Ansible%20to%20run%20playbook%20to%20dedicated%20ELK%20server.png)
 
-Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server   
+Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server. This Will allow Ansible playbook to run ELK server and Filebeat & Metricbeat in the appropriate VM.
+
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
