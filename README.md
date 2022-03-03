@@ -31,8 +31,9 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _Filebeat_: Filebeat consists of two main components: inputs and harvesters. A harvester is responsible for reading the content of a single file. The harvester reads each file, line by line, and sends the content to the output. One harvester is started for each file. An input on the other hand, is responsible for managing the harvesters and finding all sources to read from. In summary, Filebeat monitors the specified log files or locations, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 - _Metricbeat_: Metricbeat consists of modules and metricsets. A Metricbeat module defines the basic logic for collecting data from a specific service, such as Redis, MySQL etc. The module specifies details about the service, including how to connect, how often to collect metrics, and which metrics to collect. Metricbeat retrieves metrics by periodically interrogating the host system based on the period value that is specified during the module configuration.
 
-The configuration details of each machine can be found below.
+The configuration details of each machine can be found below from Table 1.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+Table 1: Configuration details of the VMs deployed in the Azure environment. 
 
 | Name               | Function                                           | IP Address                                   | Operating System     |
 |--------------------|----------------------------------------------------|----------------------------------------------|----------------------|
@@ -52,7 +53,9 @@ Only the _JumpBoxProvisioner_ machine can accept connections from the Internet. 
 Machines within the network can only be accessed by Administrator/Personal Machine. In order to allow the Administrator/Personal Machine to access JumpBoxProvisioner via SSH (port 22) for the configuration and provisioning purposes an in-bound security rule is configured in the network security group named RedTeamNSG.
 - _Similarly, Administrator/Personal machine (an IP address of 115.129.151.129) was allowed to access ELK Server (via its public IP 20.98.218.27) by configuring an in-bound security rule in the network security group called RedTeamELKNSG. The in-boud security rule was designed in a way that the Administrator/Personal machine can access ELK Server via port 5601._
 
-A summary of the access policies in place can be found in the table below.
+A summary of the access policies in place can be found in the Table 2.
+
+Table 2: Access policy of the deployed VMs
 
 | Name               | Publicly accessible | Allowed IP Address                                                                   |
 |--------------------|---------------------|--------------------------------------------------------------------------------------|
@@ -95,8 +98,15 @@ Now `SSH` into the ELK server and issue `docker ps` from the ELK server's termin
 Fig. 5: Validation: `docker ps` output to verify that ELK docker is running.
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+This ELK server is configured to monitor the following machines given by Table 3.
+
+Table 3: Machines detail monitored by ELK server.
+
+| Name of the machine | IP address of the monitored machine |
+|---------------------|-------------------------------------|
+| Web-1               |  10.2.0.6/24                        |
+| Web-2               | 10.2.0.7/24                         |
+| Web-3               | 10.2.0.8/24                         |
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
