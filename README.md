@@ -154,8 +154,7 @@ SSH into the JumpBoxProvisioner and follow the steps below:
 
 Fig. 11: Configure and update the hosts file to include paths for Web VMs and ELK Server. This Will allow Ansible playbook to run ELK server and Filebeat & Metricbeat in the appropriate VM.
 
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Run Ansible playbook by using `ansible-playbook install-elk.yml`, `ansible-playbook filebeat-playbook.yml` and `ansible-playbook metricbeat-playbook.yml` commands to install ELK stack, Filebeat and Metricbeat respectively.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
