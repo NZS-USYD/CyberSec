@@ -104,12 +104,13 @@ Table 3: Machines detail monitored by ELK server.
 
 | Name of the machine | IP address of the monitored machine |
 |---------------------|-------------------------------------|
-| Web-1               |  10.2.0.6/24                        |
+| Web-1               | 10.2.0.6/24                         |
 | Web-2               | 10.2.0.7/24                         |
 | Web-3               | 10.2.0.8/24                         |
 
-We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+The following Beats on these machines have been installed to collect logs:
+- _Filebeat_
+- _Metricbeat_
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
