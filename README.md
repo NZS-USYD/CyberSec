@@ -131,15 +131,15 @@ Here is another example of Filebeat collecting system log.
 
 FIg. 8: Filebeat collecting syslog  
 
-- _Metricbeat_: Metricbeat monitors servers by collecting metrics from the system and services running on the server as shown in Fig. 7 and Fig. 8.
+- _Metricbeat_: Metricbeat monitors servers by collecting metrics/statistics from the system and services running on the servers as shown in Fig. 9 and Fig. 10.
 
-![Metricbeat collecting docker status](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(MetricBeat)%20collectiong%20docker%20information.PNG)
+![Metricbeat collecting docker status](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(MetricBeat)%20Web-2.PNG)
 
-Fig. 6: Metricbeat collecting docker status
+Fig. 9: Metricbeat monitoring Web-2 
 
-![Metricbeat dashborad](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(MetricBeat).PNG)
+![Metricbeat dashborad](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(MetricBeat)%20Web-3.PNG)
 
-Fig. 7: Metricbeat monitoring Web VMs
+Fig. 10: Metricbeat monitoring Web-3 
 
 ### Using the Playbook.
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
