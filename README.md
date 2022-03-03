@@ -117,13 +117,13 @@ These Beats allow us to collect the following information from each machine:
 
 ![Filebeat dashboard](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(FileBeat).PNG)
 
-Fig. 6: Filebeat collecting logs from monitored VMs.
+Fig. 6: Filebeat collecting syslogs.
 
-Filebeat also collects `SSH` authentication logs, syslogs, web server data etc. Fig. 7 shows such an example where it collects accepted `SSH`logs
+Filebeat also collects `SSH` authentication logs, syslogs, web server data etc. Fig. 7 shows such an example where it collects accepted `SSH`logs:
 
 ![Filebeat collecting accepted SSH authentication log](https://github.com/NZS-USYD/CyberSec/blob/main/Diagrams/Kibana%20DashBoard(FileBeat)%20collecting%20Accepted%20SSH%20information.PNG)
 
-Fig. 7: Filebeat collecting `SSH` logs.
+Fig. 7: Filebeat collecting `SSH` authentication logs.
 
 - _Metricbeat_: Metricbeat monitors servers by collecting metrics from the system and services running on the server as shown in Fig. 7 and Fig. 8.
 
